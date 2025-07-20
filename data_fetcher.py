@@ -25,7 +25,6 @@ class Data:
                 "part": "snippet",
                 "type": "video",
                 "maxResults": maxResults,
-                "videoDuration" : "medium", # avoid shorter video <3min
                 "relevanceLanguage": "en",
                 "pageToken" : next_page_token
             }
@@ -95,7 +94,7 @@ class Data:
         )
         return self.sorted_result
 
-# For debugging in Streamlit or script run
+
 if __name__ == "__main__":
     data = Data("python")
     print(data.fetch_data())
