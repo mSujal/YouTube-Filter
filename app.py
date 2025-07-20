@@ -27,7 +27,7 @@ if st.button("Search"):
         sorted_videos = data_fetcher.sort_data()
         filtered = [
             video for video in data_fetcher.sorted_result
-            if video["duration"] >= min_duration_sec
+            if video["duration"] >= min_duration_sec/60
         ]
         if not filtered:
             st.warning("No videos found..")
