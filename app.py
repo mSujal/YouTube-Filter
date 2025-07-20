@@ -1,8 +1,6 @@
 
 import streamlit as st
 
-import sys
-sys.path.append('..')
 from data_fetcher import Data # from data_fetcher.py
 
 st.set_page_config(page_title="YouTube Video Finder", layout = "wide")
