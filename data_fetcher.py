@@ -93,9 +93,3 @@ class Data:
             reverse = True
         )
         return self.sorted_result
-
-
-if __name__ == "__main__":
-    data = Data("python")
-    print(data.fetch_data())
-    # print(data.sort_data())
