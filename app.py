@@ -27,13 +27,13 @@ if st.button("Search"):
         sorted_videos = data_fetcher.sort_data()
         filtered = [
             video for video in data_fetcher.sorted_result
-            if video["duration"] >= min_duration_sec/60
+            if video["duration"] >= min_duration_sec
         ]
         if not filtered:
             st.warning("No videos found..")
         else:
             st.success(f"Found {len(filtered)} videos (searched {search_count} pages)")
-            for i, video in enumerate(sorted_videos[:10]):
+            for i, video in enumerate(filtered[:10]):
                 cols = st.columns([1, 2])
 
                 with cols[0]:
